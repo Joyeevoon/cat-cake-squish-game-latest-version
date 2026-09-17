@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#e5f0ed">
+<title>解压捏捏实验室</title><link rel="stylesheet" href="style.css"><script src="assets/audio-data.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<div id="loading-screen"><img id="loading-mascot" src="assets/mascot.webp" alt=""><div class="loading-line" role="progressbar" aria-label="加载进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="loading-progress"></span></div><p id="loading-percent">0%</p><p id="loading-error" role="alert" hidden></p></div>
+<header><div class="brand-symbol"><i data-lucide="orbit"></i></div><div><h1>解压捏捏实验室</h1><p>SQUISH LAB <span> / </span> LITTLE MOMENTS OF SOFTNESS</p></div><span class="edition">NO. 001</span></header>
+<main>
+<section id="stage" aria-label="可捏压的三维玩偶"><canvas id="scene" aria-label="三维玩偶，可点击、持续按压和拖拽"></canvas><div id="loading" role="status">三维画面暂时无法启动</div><div class="specimen"><span id="serial">01</span><div><strong id="toy-name">猫糕</strong><small id="toy-subtitle">MINT CAT CAKE</small></div></div><div class="view-tools"><div class="interaction-modes" role="group" aria-label="操作模式"><button data-mode="squish" aria-label="捏压" aria-pressed="true" title="捏压内馅"><i data-lucide="fingerprint"></i><span class="tool-label">捏压</span></button><button data-mode="rotate" aria-label="360度旋转" aria-pressed="false" title="360度旋转"><i data-lucide="rotate-3d"></i><span class="tool-label">旋转</span></button><button data-mode="lift" aria-label="提起玩偶" aria-pressed="false" title="提起整只玩偶"><i data-lucide="hand"></i><span class="tool-label">提起</span></button></div><button id="view-reset" title="恢复初始视角" aria-label="恢复初始视角"><i data-lucide="scan"></i></button></div></section>
+<aside id="panel" aria-label="实验参数">
+<div class="panel-title"><h2>实验参数</h2><span id="counter">01 / 02</span></div>
+<div class="styles" role="group" aria-label="款式"><button data-style="cat" class="selected" aria-pressed="true"><span class="swatch mint"></span>猫糕</button><button data-style="chicken" aria-pressed="false"><span class="swatch yellow"></span>菠萝鸡</button></div>
+<div class="ranges"><div class="range"><div class="range-title"><label for="hardness">脆壳脆硬度</label><output id="hardness-value" for="hardness">22 <small>/ 100</small></output></div><input id="hardness" type="range" min="0" max="100" value="22"><div class="range-ends"><span>易碎</span><span>坚硬</span></div></div><div class="range"><div class="range-title"><label for="softness">内馅柔软度</label><output id="softness-value" for="softness">55 <small>/ 100</small></output></div><input id="softness" type="range" min="0" max="100" value="55"><div class="range-ends"><span>紧实</span><span>柔软</span></div></div></div>
+<div class="actions"><button id="sound" role="switch" aria-checked="true" title="声音开关"><i data-lucide="volume-2"></i><span>声音</span><span class="toggle"><b></b></span></button><button id="reset"><i data-lucide="rotate-ccw"></i>重来一次</button></div>
+<div class="material-state"><span class="status-dot"></span><span id="condition" aria-live="polite">完整脆壳</span><span id="percentage">100%</span></div>
+</aside>
+</main>
+<footer><span>柔软一点，也没关系。</span><span>CAT CAKE & PINEAPPLE CHICK</span></footer>
+</body></html>
